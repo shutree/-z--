@@ -1,0 +1,16 @@
+#过滤所有mtk文件夹
+doc/
+lib/
+dist/
+node_modules/
+
+#过滤所有.zip文件
+*.zip 
+#过滤文件
+*.json
+
+
+#过滤视频
+.exe
+.wmv
+.mp4

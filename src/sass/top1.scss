@@ -1,0 +1,354 @@
+/*#top{
+    width:100%;
+    .content{height:29px;border-bottom:1px solid #A2A2C2;
+        h3{padding-left: 10px;
+            float:left;}
+    }
+
+}
+*/
+%h3{
+    height:52px;
+    line-height:52px;
+    font-size:22px;
+    font-weight:bold;
+}
+%p{
+    height:88px;
+    font-size:18px;
+    padding:24px;
+    text-align:center;
+    background:#F1F1F1;
+}
+$width:1200px;
+
+#hmain{
+    img{border-bottom:1px solid #ddd;}
+    .recommend{
+        height:240px;
+        // margin-bottom:58px;
+        ul{
+            overflow:hidden;
+            margin-top:30px;
+            li{
+                float:left;
+                margin-right:4px;
+                
+            }
+        }
+    }
+    .main_special{
+        .spe_t{
+            img{float:left;}
+            ul{
+                overflow:hidden;
+                li{
+                    
+                    float:left;
+                    border-top:1px solid #ccc;
+                    border-right:4px solid #ccc;
+                }
+            }
+        }
+        .m_brand{
+            height:104px;
+            background:#F1F1F1;
+            li{
+                float:left;
+                i{
+                display:inline-block;
+                width:200px;height:103px;
+                background:url(../css/img/z-main.fw.png) -270px -130px no-repeat;
+                }
+            }
+            
+        }
+    }
+    .main_hot{
+        height:756px;
+        margin-top:36px;
+        h3{
+            @extend %h3;
+            // height:52px;
+            // line-height:52px;
+            // font-size:22px;
+            // font-weight:bold;
+        }
+        ul{
+            overflow:hidden;
+            li{
+                float:left;
+                height:330px;
+                margin-right:8px;
+                .hot_des{
+                    background:#F1F1F1;
+                    height:88px;
+                    padding-top:20px;
+                    h4{
+                        font-size:18px;
+                        line-height:26px;
+                        text-align:center;
+                        color:#666666;
+                    }
+                    p{
+                        font-size:14px;
+                        line-height:20px;
+                        text-align:center;
+                        color:#999999;
+                    }
+                }
+            }
+        }
+    }
+    .main-busi{
+        margin-top:68px;
+        height:766px;
+        ul{
+            width:1196px;
+            background:#F1F1F1;
+            padding:30px;
+            li{
+                float:left;
+                margin-right:30px;
+            }
+            li:nth-child(4){
+                margin-right:0;
+            }
+
+        }
+    }
+    .main-popstore{
+        margin-top:36px;
+        h3{
+            height:52px;
+            line-height:52px;
+            font-size:22px;
+            font-weight:bold;
+        }
+        .pop_stores{
+            li{
+                float:left;
+                width:596px;
+                height:330px;
+                margin-right:6px;
+                a{
+                    display:inline-block;
+                    width:596px;
+                    color:#666;
+                }
+                img{
+                    width:596px;
+                }
+                p{
+                    height:88px;
+                    font-size:18px;
+                    padding:24px;
+                    text-align:center;
+                    background:#F1F1F1;
+                }
+            }
+            li:nth-child(2n){
+                margin-right:0;
+            }
+        }
+        .m_brand{
+            li{
+                float:left;
+                i{
+                    display:inline-block;
+                    margin-top:6px;
+                    width:200px;height:103px;
+                    background:url(../css/img/z-main.fw.png) -270px -130px no-repeat;
+                }
+            }
+        }
+
+    }
+    .main_cus_comment{
+        width:$width;
+        margin:36px 0 40px 0;
+        .com_t{
+            
+            h3{
+                @extend %h3;
+                float:left;
+            }
+            a{
+                float:right;
+                color:#000;
+            }
+        }
+        .com_b{
+            li{
+                float:left;
+                margin-right:10px;
+                width:290px;
+                a{color:#666;}
+                p{
+                    height:56px;
+                    font-size:14px;
+                    line-height:56px;
+                    text-align:center;
+                    background:#F1F1F1; 
+                }
+            }
+            li:nth-child(4){
+                margin-right:0;
+                
+            }
+        }
+    }
+}
+
+#bottom{
+    background:#EEEEEE;
+    .btm-t{
+        border-bottom:1px solid #ccc;
+        padding:45px 0;
+    }
+    .btm_t_l{
+        border-right:1px solid #666;
+        .btm_service{
+            width:210px;
+            float:left;
+            p:nth-child(1){
+                font-size:14px;
+                font-weight:bold;
+                line-height:36px;
+            }
+            p:nth-child(2){
+                font-size:20px;
+                font-weight:bold;
+                line-height:28px;
+                color:red;
+            }
+            p:nth-child(3){
+                font-size:14px;
+                line-height:20px;
+                color:#ccc;
+            }
+            span{
+                margin-top:12px;
+                display:block;
+                width:138px;
+                height:38px;
+                border:1px solid #000;
+                border-radius:16px;
+                text-align:center;
+                line-height:36px;
+            }
+        }
+        dl{
+            float:left;
+            width:105px;
+            dt{
+                font-size:14px;
+                font-weight:bold;
+                line-height:28px;
+                padding-bottom:12px;
+            }
+            dd{
+                font-size:14px;
+                line-height:28px;
+                a{
+                    color:#666;
+                }
+            }
+        }
+    }
+    .btm_t_r{
+        padding-left:18px;
+        li{
+            float:left;
+            position:relative;
+            margin-right:20px;
+            span{
+                display:inline-block;
+                font-size:14px;
+                color:#666;
+                border-bottom:2px solid #000;
+            }
+            div{
+                display:none;
+                position:absolute;
+                left:0;
+                top:0;
+                p{
+                    font-size:14px;
+                    color:#666;
+                }
+            }
+
+        }
+        li:nth-child(4){
+            margin-right:0;
+        }
+    }
+    .btm-b{
+        li{float:left;}
+        .btm_links{
+            margin:30px 0 0 230px;
+            font-size:12px;
+            li{
+                margin-right:22px;
+                text-align:center;
+            }
+            a{
+                display:block;
+                color:#666;
+            }
+        }
+        .copyright{
+            margin-top:40px;
+            text-align:center;
+            vertical-align:middle;
+            font-size:12px;
+            line-height:28px;
+            color:#666;
+        }
+        .certificates{
+            margin-top:20px;
+            margin-left:396px;
+            li{
+                margin-right:20px;
+            }
+            li:nth-child(1) i{
+                display:inline-block;
+                width:99px;
+                height:35px;
+                background:url(../css/img/z-main.fw.png) -400px 0 no-repeat;
+            }
+            li:nth-child(2) i{
+                display:inline-block;
+                width:99px;
+                height:35px;
+                background:url(../css/img/z-main.fw.png) 0 0 no-repeat;
+            }
+            li:nth-child(3) i{
+                display:inline-block;
+                width:99px;
+                height:35px;
+                background:url(../css/img/z-main.fw.png) -130px 0 no-repeat;
+            }
+            li:nth-child(4) i{
+                display:inline-block;
+                width:99px;
+                height:35px;
+                background:url(../css/img/z-main.fw.png) -260px 0 no-repeat;
+            }
+        }
+        .other_link{
+            margin:20px 0 0 210px;
+            li{
+                font-size:12px;
+                margin-right:22px;
+                text-align:center;
+                padding-bottom:20px;
+            }
+            a{
+                display:block;
+                color:#666;
+            }
+        }
+    }
+}
