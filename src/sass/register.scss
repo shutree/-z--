@@ -1,0 +1,77 @@
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{background:#FAFAFA;}
+
+#rmain{
+    // background-color:#FAFAFA;
+    .r_content{
+        width:840px;
+        margin:0 auto;
+        .w_logo{
+            height:115px;
+        }
+        .main_box{
+            background-color:#fff;
+            border:1px solid #ccc;
+            .main_msg{
+                width:338px;
+                margin:0 auto;
+            }
+            h4{
+                height:122px;
+                font-size:28px;
+                line-height:122px;
+                text-align:center;
+            }
+            .main_content{
+                div{
+                    
+                    margin-bottom:8px;
+                    p{position:relative;overflow:hidden;}
+                    i{
+                        display:inline-block;
+                        position:absolute;
+                        left:11px;
+                        top:12px;
+                        width:12px;
+                        height:16px;
+                        color:#666;
+                    }
+                    input{
+                        border:1px solid #666;
+                        width:301px;
+                        height:40px;
+                        font-size:12px;
+                        color:#333;
+                    }
+                    .r-text{
+                        width:183px;
+                        float:left;
+                        padding-left:35px;
+                    }
+                    .btn{
+                        float:right;
+                        width:98px;
+                        cursor:pointer;
+                        border:1px solid #ddd;
+                        color:#333;
+                        background:#fff;
+                    }
+                    .sub{
+                        width:336px;
+                        background-color:#B32424;
+                        color:#fff;
+                    }
+                }
+                .c_promise{
+                    margin:28px 0;
+                    font-size:12px;
+                    color:#666;
+                    a{
+                        color:#000;
+                    }
+                }
+            }
+        }
+    }
+}

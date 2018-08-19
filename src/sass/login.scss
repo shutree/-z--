@@ -1,0 +1,101 @@
+#w_main_l{
+    overflow-x:hidden;
+    .main_head{
+        height:124px;
+        h4{
+            margin-left:142px;
+        }
+    }
+    .main_content{
+        position:relative;
+        height:580px;
+        a{
+            display:block;
+            img{
+                margin-left:-20%;
+            }
+            
+        }
+        .main_ipt{
+            position:absolute;
+            top:50px;
+            left:751px;
+            width:380px;
+            height:452px;
+            background-color:#fff;
+            h4{
+                height:98px;
+                text-align:center;
+                font-size:22px;
+                line-height:98px;
+                span{
+                    display:inline-block;
+                    margin-right:27px;
+                }
+
+            }
+            p{
+                margin:0 auto;
+                width:300px;
+                text-align:center;
+                color:#999;
+                input{
+                    width:300px;
+                    height:45px;
+                    border:1px solid #333;
+                    font-size:14px;
+                    margin-bottom:20px;
+                    padding-left:10px;
+                }
+                .txt_code{
+                    height:45px;
+                    float:left;
+                    width:200px;
+                }
+                .code{
+                    display:block;
+                    float:right;
+                    height:45px;
+                    width:94px;
+                    background:#ccc;
+                    color:#fff;
+                    font-size:14px;
+                    line-height:45px;
+                }
+                .sub_login{
+                    background-color:#CC5252;
+                    color:#fff;
+                    border:none;
+                }
+                a{
+                    color:#999;
+                    text-align:left;
+                }
+
+            }
+            .login_method{
+                margin-top:100px;
+                text-align:right;
+                font-size:18px;
+                span{
+                    display:inline-block;
+                    margin-right:10px;
+                    cursor:pointer;
+                }
+            }
+        }
+    }
+    .main_footer{
+        border-top: 1px solid #eee;
+        padding: 50px 0;
+        width: 640px;
+        margin: 0 auto;
+        p{
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            line-height: 20px;
+        }
+    }
+}

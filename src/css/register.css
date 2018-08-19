@@ -1,0 +1,31 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { background: #FAFAFA; }
+
+#rmain .r_content { width: 840px; margin: 0 auto; }
+
+#rmain .r_content .w_logo { height: 115px; }
+
+#rmain .r_content .main_box { background-color: #fff; border: 1px solid #ccc; }
+
+#rmain .r_content .main_box .main_msg { width: 338px; margin: 0 auto; }
+
+#rmain .r_content .main_box h4 { height: 122px; font-size: 28px; line-height: 122px; text-align: center; }
+
+#rmain .r_content .main_box .main_content div { margin-bottom: 8px; }
+
+#rmain .r_content .main_box .main_content div p { position: relative; overflow: hidden; }
+
+#rmain .r_content .main_box .main_content div i { display: inline-block; position: absolute; left: 11px; top: 12px; width: 12px; height: 16px; color: #666; }
+
+#rmain .r_content .main_box .main_content div input { border: 1px solid #666; width: 301px; height: 40px; font-size: 12px; color: #333; }
+
+#rmain .r_content .main_box .main_content div .r-text { width: 183px; float: left; padding-left: 35px; }
+
+#rmain .r_content .main_box .main_content div .btn { float: right; width: 98px; cursor: pointer; border: 1px solid #ddd; color: #333; background: #fff; }
+
+#rmain .r_content .main_box .main_content div .sub { width: 336px; background-color: #B32424; color: #fff; }
+
+#rmain .r_content .main_box .main_content .c_promise { margin: 28px 0; font-size: 12px; color: #666; }
+
+#rmain .r_content .main_box .main_content .c_promise a { color: #000; }
