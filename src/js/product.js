@@ -23,8 +23,8 @@
             return `<li>
                     <img src="${item.imgurl}" />
                     <div>
-                    <p><span>￥</span><span class="pro_price"></span></p>
-                    <p><span>销量</span><span class="sales"></span></p>
+                    <p><span>￥</span><span class="pro_price">${item.price}</span></p>
+                    <p><span>销量</span><span class="sales">${item.sales}</span></p>
                     </div>
                     <h5>${item.title}</h5>
                     <p>${item.dealer}</p>

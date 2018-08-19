@@ -14,9 +14,9 @@
 
 #main .main-l { width: 210px; font-size: 14px; }
 
-#main h5 { height: 42px; background: #ccc; color: #000; padding-left: 10px; line-height: 42px; }
-
 #main .main-l-t { border: 1px solid #ddd; margin: 5px 0; }
+
+#main .main-l-t h5 { height: 42px; background: #ccc; color: #000; padding-left: 10px; line-height: 42px; }
 
 #main .main-l-t #keyword { width: 122px; height: 28px; border: 1px solid #ddd; }
 
@@ -38,4 +38,6 @@
 
 #main .main-r-head p { text-align: center; line-height: 38px; cursor: pointer; }
 
-#main .main-r-list li { float: left; }
+#main .main-r-list ul li { float: left; width: 226px; }
+
+#main .main-r-list ul li h5 { font-size: 12px; }

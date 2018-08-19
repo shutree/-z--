@@ -45,14 +45,15 @@
         width:210px;
         font-size:14px;
     }
-    h5{
-        height:42px;
-        background:#ccc;
-        color:#000;
-        padding-left:10px;
-        line-height:42px;
-    }
+    
     .main-l-t{
+        h5{
+            height:42px;
+            background:#ccc;
+            color:#000;
+            padding-left:10px;
+            line-height:42px;
+        }
         border:1px solid #ddd;
         margin:5px 0;
         // label{
@@ -111,8 +112,15 @@
         }
     }
     .main-r-list{
-        li{
-            float:left;
+        ul{
+            li{
+                float:left;
+                width:226px;
+                h5{
+                    font-size:12px;
+                }
+            }
         }
+        
     }
 }
