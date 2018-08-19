@@ -1,0 +1,41 @@
+#top .search_right form { font-size: 14px; line-height: 40px; }
+
+#top .search_right #store_ser { height: 40px; width: 228px; border: 1px solid #B32424; border-right: none; }
+
+#top .search_right button { width: 60px; height: 40px; text-align: center; }
+
+#top .p-nav .pro_nav { height: 44px; background: #000; width: 1232px; }
+
+#top .p-nav .pro_nav li { float: left; padding-left: 46px; }
+
+#top .p-nav .pro_nav li a { display: block; height: 44px; color: #fff; font-size: 14px; line-height: 44px; }
+
+#top .p-nav .pro_nav li a:hover { color: #DDC89B; padding-bottom: 8px; border-bottom: 2px solid #DDC89B; }
+
+#main .main-l { width: 210px; font-size: 14px; }
+
+#main h5 { height: 42px; background: #ccc; color: #000; padding-left: 10px; line-height: 42px; }
+
+#main .main-l-t { border: 1px solid #ddd; margin: 5px 0; }
+
+#main .main-l-t #keyword { width: 122px; height: 28px; border: 1px solid #ddd; }
+
+#main .main-l-t #m-pri { height: 28px; width: 48px; border: 1px solid #ddd; }
+
+#main .main-l-t .m-btnser { width: 70px; height: 28px; background: #CC5252; color: #fff; }
+
+#main .main-l-b { border: 1px solid #ddd; }
+
+#main .main-r { width: 1022px; }
+
+#main .main-r-head { height: 38px; margin-left: 20px; border-bottom: 1px solid #ccc; }
+
+#main .main-r-head li { float: left; font-size: 14px; line-height: 38px; padding-left: 35px; }
+
+#main .main-r-head li span { display: block; font-weight: bold; }
+
+#main .main-r-head li:hover span { color: #CC5252; border-bottom: 2px solid #CC5252; cursor: pointer; }
+
+#main .main-r-head p { text-align: center; line-height: 38px; cursor: pointer; }
+
+#main .main-r-list li { float: left; }
