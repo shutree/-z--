@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>商品列表</title>
+        <title>购物车</title>
         <link rel="stylesheet" type="text/css" href="../css/base.css" />
         <link rel="stylesheet" type="text/css" href="../css/common.css" />
-        <link rel="stylesheet" type="text/css" href="../css/product.css" />
-        <script src="../lib/jquery-3.2.1.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../css/font/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="../css/buycar.css" />
     </head>
     <body>
         <div id="top">
@@ -41,109 +41,145 @@
                             <img src="../img/logo_des.png" height="115" width="187" />
                         </a>
                     </div>
-                    <div class="search-right fr">
-                        <form action="#">
-                            <input type="search" placeholder="搜索 品牌/系列/型号" id="store_ser" />
-                            <button id="wb_ser"></button>
-                            <button id="current_ser"></button>
-                        </form>
-                        <i class="iconfont"></i>
-                        <i class="iconfont"></i>
+                    <div class="search-right fr clearfix">
+                        <img src="../css/img/stepimg.png" alt="" height="87" width="531" />
+                        <!-- <div class="linear"></div>
+                        <div class="one_incar fl">
+                            <i></i>
+                            <p>购物车</p>
+                        </div>
+                        <div class="two_inmsg fl">
+                            <i></i>
+                            <p>填写订单信息</p>
+                        </div>
+                        <div class="three_inorder fl">
+                            <i></i>
+                            <p>支付订单</p>
+                        </div>
+                        <div class="four_inreci fl">
+                            <i></i>
+                            <p>等待签收</p> -->
+                        </div>
                     </div>
-                </div>
-                <div class="p-nav">
-                    <img src="../img/nav_img.png" alt="" />
-                    <ul class="pro_nav clearfix">
-                        <li><a href="#">首页</a></li>
-                        <li><a href="#">商品</a></li>
-                        <li><a href="#">男士腕表</a></li>
-                        <li><a href="#">女士腕表</a></li>
-                        <li><a href="#">情侣专区</a></li>
-                        <li><a href="#">商务休闲</a></li>
-                        <li><a href="#">户外运动</a></li>
-                        <li><a href="#">钢带腕表</a></li>
-                        <li><a href="#">皮带腕表</a></li>
-                        <li><a href="#">闪购专场</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
-        <div id="main">
-            <div class="container clearfix">
-                <div class="main-l fl">
-                    <div class="main-l-t">
-                        <h5>店内搜索</h5>
-                        <div class="m_ser">
-                            <div>
-                                <label for="keyword">关键字</label>
-                                <input type="text" id="keyword" />
-                            </div>
-                            <div>
-                                <label for="m-pri">价格区间</label>
-                                <input type="text" id="m-pri p1" />
-                                <span>-</span>
-                                <input type="text" id="m-pri p2" />
-                            </div>
-                            <button class="m-btnser">搜索</button>
-                        </div>
-                    </div>
-                    <div class="main-l-b">
-                        <h5>商品分类</h5>
-                        <ul>
-                            <li>特卖专区</li>
-                            <li>男士专区</li>
-                            <li>女士专区</li>
-                            <li>情侣对表</li>
-                            <li>中性腕表</li>
-                            <li>系列分类</li>
-                            <li>搭配场景</li>
-                            <li>功能分类</li>
-                            <li>价格区间</li>
-                            <li>尺寸规格</li>
-                        </ul>
-                    </div>
+        <div id="buy-main">
+            <div class="container">
+                <h3>
+                    <b>全部商品</b>
+                    <b>（</b>
+                    <b class="goods-qty"></b>
+                    <b>)</b>
+                </h3>
+                <div class="cart_nav clearfix">
+                    <p class="clearfix fl">
+                        <input type="checkbox" />
+                        <span class="all_txt">全选</span>
+                        <span class="msg_txt">商品信息</span>
+                    </p>
+                    <ul class="clearfix fr">
+                        <li>单价</li>
+                        <li>数量</li>
+                        <li>小计</li>
+                        <li>操作</li>
+                    </ul>
                 </div>
-                <div class="main-r fl">
-                    <div class="main-r-head clearfix">
-                        <ul class="fl clearfix">
-                            <li class="total_sort"><span>综合排序</span></li>
-                            <li class="sale_sort"><span>销量优先</span></li>
-                            <li class="price_sort"><span>价格排序</span></li>
-                            <li class="new_pro"><span>新品</span></li>
-                        </ul>
-                        <p class="fr">
-                            <span>&lt;</span>
-                            <span class="pro_page"></span>
-                            <span>/3</span>
-                            <span>&gt;</span>
-                        </p>
-                    </div>
-                    <div class="main-r-list">
-                        <ul class="clearfix">
-                            <!-- <li>
+                <div>
+                   <div class="c-goodslist">
+                        <h3>
+                            <input type="checkbox" />
+                            <span>东方双狮官方旗舰店</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" />
                                 <img src="../img/list1.png" height="280" width="206" alt="" />
-                                <div>
-                                    <p>
-                                        <span>￥</span>
-                                        <span class="pro_price">8350</span>
-                                    </p>
-                                    <p>
-                                        <span>销量</span>
-                                        <span class="sales">2387</span>
-                                    </p>
-                                </div>
-                                <h5>把健康的都是收款方跨境电商放大放大空间饭店客房的史莱克</h5>
-                                <span>自营</span>
-                                <div>
-                                    <span>加入收藏</span>
-                                    <span>加入购物车</span>
-                                </div>
-                            </li> -->
+                                <i></i>
+                                <p class="des_goods">
+                                    <span class="des-g">三年联保巴拉巴拉巴拉反政府宽度和房东看房活动大幅度</span>
+                                    <span class="texture">不锈钢</span>
+                                    <span class="car-color">深蓝色</span>
+                                </p>
+                                <p class="cost">
+                                    <span>￥</span>
+                                    <span class="s-pri">2448</span>
+                                </p>
+                                <p class="goods_num">
+                                    <span class="reduce calc-btns">-</span>
+                                    <input class="num" value="1" data-stock="1" readonly="" type="text">
+                                    <span class="add calc-btns">+</span>
+                                </p>
+                                <p class="total-cost">
+                                    <span>￥</span>
+                                    <span class="t-pri">2448</span>
+                                </p>
+                                <p class="ope-goods">
+                                    <span class="g-del">删除</span>
+                                    <span class="g-move">移入收藏夹</span>
+                                </p>
+                            </li>
+                            <li>
+                                <input type="checkbox" />
+                                <img src="../img/list1.png" height="280" width="206" alt="" />
+                                <i></i>
+                                <p class="des_goods">
+                                    <span class="des-g">三年联保巴拉巴拉巴拉反政府宽度和房东看房活动大幅度</span>
+                                    <span class="texture">不锈钢</span>
+                                    <span class="car-color">深蓝色</span>
+                                </p>
+                                <p class="cost">
+                                    <span>￥</span>
+                                    <span class="s-pri">2448</span>
+                                </p>
+                                <p class="goods_num">
+                                    <span class="reduce calc-btns">-</span>
+                                    <input class="num" value="1" data-stock="1" readonly="" type="text">
+                                    <span class="add calc-btns">+</span>
+                                </p>
+                                <p class="total-cost">
+                                    <span>￥</span>
+                                    <span class="t-pri">2448</span>
+                                </p>
+                                <p class="ope-goods">
+                                    <span class="g-del">删除</span>
+                                    <span class="g-move">移入收藏夹</span>
+                                </p>
+                            </li>
                         </ul>
-                        <div class="page-no">
-                            
-                        </div>
-                    </div>
+                    </div> 
+                </div>
+                
+                <div class="settle_floor" id="settle_floor">
+                    <ul class="clearfix">
+                        <li class="check_a">
+                            <input type="checkbox" id="check-all" />
+                            <label for="check-all">全选</label>
+                        </li>
+                        <li>删除</li>
+                        <li>移入收藏</li>
+                        <li>清空失效商品</li>
+                        <li class="check_set_n">
+                            <span>已选商品</span>
+                            <span class="g-red">0</span>
+                            <span>件</span>
+                        </li>
+                        <li class="total_g">
+                            <p>
+                                <span>合计</span>
+                                <b>￥</b>
+                                <b class="total_n">0</b>
+                            </p>
+                            <p>
+                                <span>总额</span>
+                                <span>￥</span>
+                                <span class="total_p">0</span>
+                            </p>
+                        </li>
+                        <li class="check_btn">
+                            <a href="#">结算</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -252,8 +288,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>  
+            </div> 
         </div>
-        <script src="../js/require.js" data-main="../js/product"></script>
     </body>
 </html>

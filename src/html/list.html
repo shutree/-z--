@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>商品列表</title>
+        <title>list</title>
         <link rel="stylesheet" type="text/css" href="../css/base.css" />
         <link rel="stylesheet" type="text/css" href="../css/common.css" />
-        <link rel="stylesheet" type="text/css" href="../css/product.css" />
-        <script src="../lib/jquery-3.2.1.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../css/font/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="../css/list.css" />
     </head>
     <body>
         <div id="top">
@@ -43,109 +43,29 @@
                     </div>
                     <div class="search-right fr">
                         <form action="#">
-                            <input type="search" placeholder="搜索 品牌/系列/型号" id="store_ser" />
-                            <button id="wb_ser"></button>
-                            <button id="current_ser"></button>
+                            <input type="search" placeholder="搜索 品牌/系列/型号"/>
                         </form>
                         <i class="iconfont"></i>
                         <i class="iconfont"></i>
                     </div>
                 </div>
-                <div class="p-nav">
-                    <img src="../img/nav_img.png" alt="" />
-                    <ul class="pro_nav clearfix">
-                        <li><a href="#">首页</a></li>
-                        <li><a href="#">商品</a></li>
-                        <li><a href="#">男士腕表</a></li>
-                        <li><a href="#">女士腕表</a></li>
-                        <li><a href="#">情侣专区</a></li>
-                        <li><a href="#">商务休闲</a></li>
-                        <li><a href="#">户外运动</a></li>
-                        <li><a href="#">钢带腕表</a></li>
-                        <li><a href="#">皮带腕表</a></li>
-                        <li><a href="#">闪购专场</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
-        <div id="main">
-            <div class="container clearfix">
-                <div class="main-l fl">
-                    <div class="main-l-t">
-                        <h5>店内搜索</h5>
-                        <div class="m_ser">
-                            <div>
-                                <label for="keyword">关键字</label>
-                                <input type="text" id="keyword" />
-                            </div>
-                            <div>
-                                <label for="m-pri">价格区间</label>
-                                <input type="text" id="m-pri p1" />
-                                <span>-</span>
-                                <input type="text" id="m-pri p2" />
-                            </div>
-                            <button class="m-btnser">搜索</button>
-                        </div>
-                    </div>
-                    <div class="main-l-b">
-                        <h5>商品分类</h5>
-                        <ul>
-                            <li>特卖专区</li>
-                            <li>男士专区</li>
-                            <li>女士专区</li>
-                            <li>情侣对表</li>
-                            <li>中性腕表</li>
-                            <li>系列分类</li>
-                            <li>搭配场景</li>
-                            <li>功能分类</li>
-                            <li>价格区间</li>
-                            <li>尺寸规格</li>
-                        </ul>
-                    </div>
+        <div class="z_bread">
+            <div class="bread_inner clearfix">
+                <div class="bread_left fl">
+                    <a href="#">首页</a>  
+                    <a href="#">商品中心</a> 
                 </div>
-                <div class="main-r fl">
-                    <div class="main-r-head clearfix">
-                        <ul class="fl clearfix">
-                            <li class="total_sort"><span>综合排序</span></li>
-                            <li class="sale_sort"><span>销量优先</span></li>
-                            <li class="price_sort"><span>价格排序</span></li>
-                            <li class="new_pro"><span>新品</span></li>
-                        </ul>
-                        <p class="fr">
-                            <span>&lt;</span>
-                            <span class="pro_page"></span>
-                            <span>/3</span>
-                            <span>&gt;</span>
-                        </p>
-                    </div>
-                    <div class="main-r-list">
-                        <ul class="clearfix">
-                            <!-- <li>
-                                <img src="../img/list1.png" height="280" width="206" alt="" />
-                                <div>
-                                    <p>
-                                        <span>￥</span>
-                                        <span class="pro_price">8350</span>
-                                    </p>
-                                    <p>
-                                        <span>销量</span>
-                                        <span class="sales">2387</span>
-                                    </p>
-                                </div>
-                                <h5>把健康的都是收款方跨境电商放大放大空间饭店客房的史莱克</h5>
-                                <span>自营</span>
-                                <div>
-                                    <span>加入收藏</span>
-                                    <span>加入购物车</span>
-                                </div>
-                            </li> -->
-                        </ul>
-                        <div class="page-no">
-                            
-                        </div>
-                    </div>
-                </div>
+                <div class="top_hot_keyword fr">
+                    <span class="fl">热门搜索：</span>
+                    <a href="#" class="fl">天梭力洛克</a>
+                    <a href="#" class="fl">时尚赫柏林</a>
+               </div>  
             </div>
+        </div>
+        <div id="lmain">
+            
         </div>
         <div id="bottom">
             <div class="container">
@@ -254,6 +174,5 @@
                 </div>
             </div>  
         </div>
-        <script src="../js/require.js" data-main="../js/product"></script>
     </body>
 </html>

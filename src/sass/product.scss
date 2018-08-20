@@ -1,3 +1,7 @@
+
+@import 'var';
+
+
 #top{
     .search_right{
         form{
@@ -87,7 +91,7 @@
     }
     .main-r-head{
         height:38px;
-        margin-left:20px;
+        margin:0 0 5px 20px;
         border-bottom:1px solid #ccc;
         li{
             float:left;
@@ -113,14 +117,78 @@
     }
     .main-r-list{
         ul{
+            position:relative;
             li{
+                a{
+                    color:#000;
+                }
                 float:left;
-                width:226px;
+                width:$listWidth;
+                height:462px;
+                padding:16px 16px 10px;
+                margin-bottom:10px;
+                img{
+                    width:$listInwidth;
+
+                }
                 h5{
                     font-size:12px;
+                    line-height:20px;
+                }
+                .pro_num{
+                    overflow:hidden;
+                }
+                .price_n{
+                    font-size:16px;
+                    line-height:30px;
+                }
+                .sale_n{
+                    font-size:12px;
+                    line-height:30px;
+                    color:$footColor;
+                }
+                .p_dealer{
+                    width:40px;
+                    height:20px;
+                    font-size:12px;
+                    line-height:20px;
+                    text-align:center;
+                    border-radius:10px;
+                    background:$mainColor;
+                    color:#fff;
+                }
+                .add-goods{
+                    margin-top:5px;
+                    display:none;
+                    width:$listInwidth;
+                    height:30px;
+                    border:1px solid #ddd;
+                    span{
+                        display:inline-block;
+                        width:97px;
+                        text-align:center;
+                        font-size:12px;
+                        line-height:30px;
+                    }
+                    .add1{
+                        border-right:1px solid #ddd;
+                    }
+                    .f_color{
+                        color:red;
+                    }
                 }
             }
+            li:hover{
+                box-shadow:0 0 8px #DFDFDF;
+
+            }
+            li:hover .add-goods{
+                display:block;
+            }
         }
+        
+    }
+    .page-no{
         
     }
 }

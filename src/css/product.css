@@ -28,7 +28,7 @@
 
 #main .main-r { width: 1022px; }
 
-#main .main-r-head { height: 38px; margin-left: 20px; border-bottom: 1px solid #ccc; }
+#main .main-r-head { height: 38px; margin: 0 0 5px 20px; border-bottom: 1px solid #ccc; }
 
 #main .main-r-head li { float: left; font-size: 14px; line-height: 38px; padding-left: 35px; }
 
@@ -38,6 +38,32 @@
 
 #main .main-r-head p { text-align: center; line-height: 38px; cursor: pointer; }
 
-#main .main-r-list ul li { float: left; width: 226px; }
+#main .main-r-list ul { position: relative; }
 
-#main .main-r-list ul li h5 { font-size: 12px; }
+#main .main-r-list ul li { float: left; width: 234px; height: 462px; padding: 16px 16px 10px; margin-bottom: 10px; }
+
+#main .main-r-list ul li a { color: #000; }
+
+#main .main-r-list ul li img { width: 202px; }
+
+#main .main-r-list ul li h5 { font-size: 12px; line-height: 20px; }
+
+#main .main-r-list ul li .pro_num { overflow: hidden; }
+
+#main .main-r-list ul li .price_n { font-size: 16px; line-height: 30px; }
+
+#main .main-r-list ul li .sale_n { font-size: 12px; line-height: 30px; color: #999; }
+
+#main .main-r-list ul li .p_dealer { width: 40px; height: 20px; font-size: 12px; line-height: 20px; text-align: center; border-radius: 10px; background: #CC5252; color: #fff; }
+
+#main .main-r-list ul li .add-goods { margin-top: 5px; display: none; width: 202px; height: 30px; border: 1px solid #ddd; }
+
+#main .main-r-list ul li .add-goods span { display: inline-block; width: 97px; text-align: center; font-size: 12px; line-height: 30px; }
+
+#main .main-r-list ul li .add-goods .add1 { border-right: 1px solid #ddd; }
+
+#main .main-r-list ul li .add-goods .f_color { color: red; }
+
+#main .main-r-list ul li:hover { box-shadow: 0 0 8px #DFDFDF; }
+
+#main .main-r-list ul li:hover .add-goods { display: block; }
