@@ -66,6 +66,28 @@
 }
 
 
+/*
+z-bread样式
+*/
+.z_bread { background: #F1F1F1; height: 36px; margin-bottom: 5px; }
+
+.z_bread span { font-size: 14px; line-height: 36px; padding-right: 8px; color: #666666; }
+
+.z_bread a { display: inline-block; font-size: 14px; line-height: 36px; padding-right: 8px; color: #666666; }
+
+/*
+商品页详情页导航条样式
+ */
+
+#top .p-nav .pro_nav { height: 44px; background: #000; /*width: 1232px;*/ }
+
+#top .p-nav .pro_nav li { float: left; padding-left: 46px; }
+
+#top .p-nav .pro_nav li a { display: block; height: 44px; color: #fff; font-size: 14px; line-height: 44px; }
+
+#top .p-nav .pro_nav li a:hover { color: #DDC89B; padding-bottom: 8px; border-bottom: 2px solid #DDC89B; }
+
+
 /*尾部部分公共样式*/
 
 #bottom { background: #EEEEEE; }
