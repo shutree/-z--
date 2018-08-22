@@ -77,6 +77,7 @@
     color:#fff;
 }
 #top .nav-l .nav-bar{
+    z-index: 1000;
     position:absolute;
     top:42px;
     left:0;

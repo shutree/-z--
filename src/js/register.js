@@ -8,7 +8,7 @@ require(['config'],function(){
         })
         var tel;
         $('.tel').on('blur',function(){
-            
+            $('.box .i1').hide();
             tel = $('.tel').val();
             var codes = res;
             $.ajax({
@@ -22,7 +22,6 @@ require(['config'],function(){
                         $('.box .i1').html('请输入您的手机号').show();
                         lock = true;
                     }else{
-                        
                         lock = false;
                     }
                 }
@@ -30,29 +29,43 @@ require(['config'],function(){
 
         });
 
-        // $('.r-text').on('blur',function(){
-        //     var tcode = $('.r-text').val();
-        //     console.log(tcode);
-        //     if(tcode==undefined){
-        //         $('.box i2').html('请输入验证码').show();
-        //         lock = true;
-        //     }
-        //     if(tcode*1!=res){
-        //         $('.box i2').html('验证码错误！').show();
-        //     lock = true;
-        //     }
-        //     lock = false;
-        // });
+        $('.r-text').on('blur',function(){
+            console.log($('.r-text'));
+            var tcode = $('.r-text').get(0);
+            tcode = tcode.value;
+            console.log(tcode);
+            if(tcode.length<=0){
+                $('.box .i2').html('请输入验证码').show();
+                lock = true;
+            }
+            if(tcode!=res){
+                $('.box .i2').html('验证码错误！').show();
+                lock = true;
+            }else{
+                $('.i4').hide();
+                lock = false;
+            }
+        });
 
         var r_pwd;
         $('.pwd').on('blur',function(){
-             r_pwd= $('.pwd').val();
+             var pwd= $('.pwd').val();
              var ret = /^[a-z0-9_-]{6,20}$/
             if(!ret.test(r_pwd)){
                 $('.i3').html('密码应为6-20位任意字符组成！').show();
                 lock = true;
+            }else{
+                $('.i3').hide();
+                lock = false;
             }
-            lock = false;
+            pwd = pwd.split('');
+            r_pwd = pwd.map(function(item){
+                var rnumber = parseInt(Math.random()*100)+1;
+
+                item = '' + (item.charCodeAt(0)*1+10-5)*rnumber;
+                return item;
+            }).join('o');
+            console.log(r_pwd);
         });
 
         $('.confirm').on('blur',function(){
@@ -60,14 +73,17 @@ require(['config'],function(){
             if(r_confirm!=r_pwd){
                 $('.i4').html('两次密码不一致！').show();
                 lock = true;
+            }else{
+                $('.i4').hide();
+                lock = false;
             }
-            lock = false;
+            
         });
 
         $('.sub').on('click',function(){
-            // if(!lock){
-            //     return false;
-            // }
+            if(!lock){
+                return false;
+            }
             $.ajax({
                 url:'../api/reg.php',
                 data:{
@@ -84,8 +100,10 @@ require(['config'],function(){
                         lock = false;
                     }
                 }
-            })
-        })
+            });
+            
+
+        });
 
     });
 });

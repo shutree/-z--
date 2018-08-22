@@ -1,9 +1,11 @@
 
 require(['config'],function(){
     require(['jquery','common'],function($,com){
+
+
         var _pageNo = 1;
         var _qty = 48;
-        
+        var len;
         $.ajax({
             type:"post",
             url:'../api/goods.php',
@@ -13,14 +15,52 @@ require(['config'],function(){
             },
             success:function(res){
                 res = JSON.parse(res);
-                // console.log(d);
+
+                len = Math.ceil(res[0].total/res[0].qty);
+
+                for(var i =0;i<3;i++){
+                    var $span = $('<span/>');
+                    $span.html(i+1);
+                    $('.pages').append($span);
+                    if(i===0){
+                        $span.addClass('active');
+                    }
+                }
+                
+                console.log($('.pages'));
                 cre(res);
             }
 
         });
 
+        $('.pages').on('click','span',function(){
+            _pageNo = $(this).text();
+            var s = $('.pages').children('span');
+            s.each(function(idx){
+                s.eq(idx).removeClass('active');
+            })
+            console.log(s);
+            $(this).addClass('active');
+            $.ajax({
+                type:"post",
+                url:'../api/goods.php',
+                data:{
+                    qty:_qty,
+                    pageNo:_pageNo
+                },
+                success:function(res){
+                    res = JSON.parse(res);
+
+                    cre(res);
+                }
+            })
+            console.log(_pageNo);
+        })
+
 
         function cre(data){
+           
+
             // console.log(data[0].row);
             var lis = data[0].row.map(function(item){
             return `<li data-guid = "${item.id}">
