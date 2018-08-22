@@ -30,6 +30,7 @@ html{background:#FAFAFA;}
                     p{
                         position:relative;overflow:hidden
                         ;
+                        
                         i{
                         display:inline-block;
                         position:absolute;
@@ -47,7 +48,8 @@ html{background:#FAFAFA;}
                     }
                     input{
                         border:1px solid #666;
-                        width:301px;
+                        padding-left:29px;
+                        width:338px;
                         height:40px;
                         font-size:12px;
                         color:#333;
@@ -55,7 +57,7 @@ html{background:#FAFAFA;}
                     .r-text{
                         width:183px;
                         float:left;
-                        padding-left:35px;
+                        padding-left:29px;
                     }
                     .btn{
                         float:right;
@@ -64,6 +66,7 @@ html{background:#FAFAFA;}
                         border:1px solid #ddd;
                         color:#333;
                         background:#fff;
+                        padding-left:0;
                     }
                     .sub{
                         width:336px;

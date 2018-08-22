@@ -5,6 +5,7 @@
         <title>register</title>
         <link rel="stylesheet" type="text/css" href="../css/base.css" />
         <link rel="stylesheet" type="text/css" href="../css/register.css" />
+        <link rel="stylesheet" type="text/css" href="../css/font/iconfont.css" />
     </head>
     <body>
         <div id="rmain">
@@ -17,26 +18,26 @@
                         <h4>注册万表会员</h4>
                         <div class="main_content">
                             <div class="box">
-                                <p><i class="iconfont icon-phone"></i><input type="text" name="number" placeholder="请输入手机号码"/></p>
-                                <i></i>
+                                <p><i class="iconfont icon-phone"></i><input type="text" name="number" placeholder="请输入手机号码"class="tel"/></p>
+                                <i class="iconfont icon-gantanhao i1"></i>
                             </div>
                             <div class="box">
                                 <p class="clearfix"><i class="iconfont icon-anquan"></i><input type="text" name="code" class="r-text" placeholder="请输入短信验证码"/>
                                 <input type="button" class="btn" value="点击获取验证码"/>
                                 </p>
-                                <i></i>
+                                <i class="iconfont icon-gantanhao i2"></i>
                             </div>
                             <div class="box">
-                                <p><i class="iconfont icon-suo"></i><input type="password" name="password" placeholder="请设置密码"/></p>
-                                <i></i>
+                                <p><i class="iconfont icon-suo"></i><input type="password" name="password" placeholder="请设置密码" class="pwd"/></p>
+                                <i class="iconfont icon-gantanhao i3"></i>
                             </div>
                             <div class="box">
-                                <p><i class="iconfont icon-suo"></i><input type="password" placeholder="请再次输入密码"/></p>
-                                <i></i>
+                                <p><i class="iconfont icon-suo"></i><input type="password" placeholder="请再次输入密码" class="confirm" /></p>
+                                <i class="iconfont icon-gantanhao i4"></i>
                             </div>
                             <div class="box">
-                                <p><i class="iconfont"></i><input type="text" name="recommend" placeholder="如有推荐人，请填写推荐人手机号"/></p>
-                                <i></i>
+                                <p><i class="iconfont"></i><input type="text" name="recommend" placeholder="如有推荐人，请填写推荐人手机号"/ class="recommend"></p>
+                                <i class="iconfont icon-gantanhao i5"></i>
                             </div>
                             <div class="box">
                                 <input type="submit" value="立即注册" class="sub" />
@@ -47,5 +48,6 @@
                 </div>
             </div>
         </div>
+        <script src="../js/require.js" data-main="../js/register"></script>
     </body>
 </html>
