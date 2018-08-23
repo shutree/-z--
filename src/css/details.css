@@ -60,7 +60,7 @@
 
 #dmain .details-upper .upper-some .goods_num input { width: 42px; text-align: center; }
 
-#dmain .details-upper .upper-some .goods_num span { display: inline-block; width: 14px; text-align: center; }
+#dmain .details-upper .upper-some .goods_num span { display: inline-block; width: 14px; text-align: center; cursor: pointer; }
 
 #dmain .details-upper .upper-some .goods_num .reduce { border-right: 1px solid #ddd; }
 
@@ -78,7 +78,7 @@
 
 #dmain .upper-choice ul li span { vertical-align: middle; }
 
-#dmain .upper-choice ul li i { display: inline-block; position: absolute; bottom: 0; right: 0; width: 15px; height: 13px; background: url(../css/img/z-main.fw.png) 0 -50px no-repeat; }
+#dmain .upper-choice ul li i { display: none; position: absolute; bottom: 0; right: 0; width: 15px; height: 13px; background: url(../css/img/z-main.fw.png) 0 -50px no-repeat; }
 
 #dmain .upper-choice ul li.active { border: 2px solid #000; }
 

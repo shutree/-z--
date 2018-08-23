@@ -10,8 +10,6 @@ require(['config'],function(){
         //     });
         // });
     
-        
-        
 
 
 
@@ -28,7 +26,7 @@ require(['config'],function(){
                     button:true,//是否显示左右按钮
                     type:'vertical',//动画类型：vertical(垂直)，horizontal(水平),fade(淡入淡出)
                     seamless:true,//是否无缝滚动,
-                    duration:5000,//轮播间隔时间
+                    duration:3000,//轮播间隔时间
                 }
                 
                 // 扩展默认参数

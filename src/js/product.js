@@ -17,8 +17,8 @@ require(['config'],function(){
                 res = JSON.parse(res);
 
                 len = Math.ceil(res[0].total/res[0].qty);
-
-                for(var i =0;i<3;i++){
+                console.log(len)
+                for(var i =0;i<len;i++){
                     var $span = $('<span/>');
                     $span.html(i+1);
                     $('.pages').append($span);
@@ -32,7 +32,7 @@ require(['config'],function(){
             }
 
         });
-
+        var outres;
         $('.pages').on('click','span',function(){
             _pageNo = $(this).text();
             var s = $('.pages').children('span');
@@ -50,7 +50,7 @@ require(['config'],function(){
                 },
                 success:function(res){
                     res = JSON.parse(res);
-
+                    outres = res;
                     cre(res);
                 }
             })
@@ -59,8 +59,6 @@ require(['config'],function(){
 
 
         function cre(data){
-           
-
             // console.log(data[0].row);
             var lis = data[0].row.map(function(item){
             return `<li data-guid = "${item.id}">
@@ -99,7 +97,36 @@ require(['config'],function(){
         });
         
 
-        
+        // 商品价格排序
+        $('.price_sort').on('click',function(){
+            $.ajax({
+                url:'../api/priceSort.php',
+                data:{
+                    qty:_qty,
+                    pageNo:_pageNo
+                },
+                success:function(res){
+                    res1 = JSON.parse(res);
+                    $('.main-r-list>ul>li').empty();
+                    cre(res1);
+                }
+            });
+        });
+        // 商品时间排序
+        $('.new_pro').on('click',function(){
+            $.ajax({
+                url:'../api/timeSort.php',
+                data:{
+                    qty:_qty,
+                    pageNo:_pageNo
+                },
+                success:function(res){
+                    res2 = JSON.parse(res);
+                    $('.main-r-list>ul>li').empty();
+                    cre(res2);
+                }
+            });
+        });
 
             
 /*       var Car = {
@@ -221,75 +248,3 @@ require(['config'],function(){
 */
     });
 });
-
-
-
-// define(['jquery'],function($){
-//     var _pageNo = 1;
-//     var _qty = 48;
-//     $.ajax({
-//         url:'../api/goods.php',
-//         data:{
-//             qty:_qty,
-//             pageNo:_pageNo
-//         }
-//         success:function(res){
-//             // var data = res.row;
-//             console.log(res);
-//             // cre(data);
-//         }
-
-//     });
-//     function cre(data){
-//         var lis = data.map(function(item){
-//             return `<li>
-//                     <img src="${item.imgurl}" />
-//                     <div>
-//                     <p><span>￥</span><span class="pro_price">${item.price}</span></p>
-//                     <p><span>销量</span><span class="sales">${item.sales}</span></p>
-//                     </div>
-//                     <h5>${item.title}</h5>
-//                     <p>${item.dealer}</p>
-//                     <div>
-//                     <span>加入收藏</span>
-//                     <span>加入购物车</span>
-//                     </div>
-//                 </li>`;
-//         }).join('');
-//     }
-//     $('.main-r-list ul').html(lis);
-
-// })
-// (function(){
-
-//     var main = document.querySelector('.main-r-list');
-//     var ul = main.children[0];
-//     let status = [200,304];
-//     var xhr = new XMLHttpRequest();
-//     xhr.onload = function(){
-//         if(status.indexOf(xhr.status)>=0){
-//             var data= JSON.parse(xhr.responseText);
-//             cre(data);
-//         }
-//     }
-//     xhr.open('get','../api/goods.php');
-//     xhr.send(null);
-
-    // function cre(data){
-    //     ul.innerHTML = data.map(function(item){
-    //         return `<li>
-    //                 <img src="${item.imgurl}" />
-    //                 <div>
-    //                 <p><span>￥</span><span class="pro_price">${item.price}</span></p>
-    //                 <p><span>销量</span><span class="sales">${item.sales}</span></p>
-    //                 </div>
-    //                 <h5>${item.title}</h5>
-    //                 <p>${item.dealer}</p>
-    //                 <div>
-    //                 <span>加入收藏</span>
-    //                 <span>加入购物车</span>
-    //                 </div>
-    //             </li>`;
-    //     }).join('');
-    // }
-// })();

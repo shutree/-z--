@@ -137,6 +137,7 @@
                     display:inline-block;
                     width:14px;
                     text-align:center;
+                    cursor:pointer;
                 }
                 .reduce{
                     border-right:1px solid #ddd;
@@ -169,7 +170,7 @@
                    vertical-align:middle; 
                 }
                 i{
-                    display:inline-block;
+                    display:none;
                     position:absolute;
                     bottom:0;right:0;
                     width:15px;
