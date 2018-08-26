@@ -24,7 +24,7 @@ require(['config'],function(){
     });
 
     // 右侧边效果
-    // $('.car-s1').hide();
+    $('.car-s1').hide();
     var display = true;
     var lock = true;
     // 点击出现列表框
@@ -45,10 +45,10 @@ require(['config'],function(){
         }
         var car = $(this).find('.car-s1');
         if(lock){
-            car.get(0).style.display:'flex';
+            car.show();
             lock = false;
         }else{
-            car.get(0).style.display:'none';
+            car.hide();
             lock = true;
         }
     });

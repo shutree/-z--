@@ -1,6 +1,36 @@
 require(['config'],function(){
     require(['jquery','common','lxzoom'],function($,com){
 
+
+        // 右侧边效果
+        $('.side').load('html/sidebar.html');
+        $('.car-s1').hide();
+        var lock = true;
+        $('.side').on('click','div',function(){
+        console.log(666)
+        // 回到顶部效果
+        if($(this).get(0).className == 'back'){
+            let timer = setInterval(()=>{
+                // 计算缓冲速度
+                let speed = Math.ceil(window.scrollY/5);//1
+
+                scrollBy(0,-speed);
+
+                if(window.scrollY <= 0){
+                    clearInterval(timer);
+                }
+            },30);
+        }
+        var car = $(this).find('.car-s1');
+        if(lock){
+            car.show();
+            lock = false;
+        }else{
+            car.hide();
+            lock = true;
+        }
+    });
+
         var params = location.search.slice(1);
         params = params.split('&');
         var goods = {};
@@ -66,7 +96,6 @@ require(['config'],function(){
         //     cargoods = cargoods.slice(0,-1);
         //     location.href = 'buycar.html?' + cargoods;
         // });
-
         // 添加购物车效果
         $('.upper-btn .through-car').on('click',function(){
             
@@ -196,6 +225,11 @@ require(['config'],function(){
         }
         var num = document.querySelector('.goods_num .num');
         var cart = document.querySelector('.through-car');
+
+        // 点击购物车按钮写入cookie，添加加入购物车效果
+        
+        var sideCar = document.querySelector('.side-car');
+        console.log(sideCar);
         cart.onclick = function(){
 
             var currentGoods = goodslist.filter(function(item){
@@ -218,38 +252,54 @@ require(['config'],function(){
             }
 
             Cookie.set('goodslist',JSON.stringify(goodslist));
-        }
-        console.log(goodslist);
-        // 右侧边效果
-        $('.side').load('html/sidebar.html');
-        $('.car-s1').hide();
-        var lock = true;
-        $('.side').on('click','div',function(){
-        console.log(666)
-        // 回到顶部效果
-        if($(this).get(0).className == 'back'){
-            let timer = setInterval(()=>{
-                // 计算缓冲速度
-                let speed = Math.ceil(window.scrollY/5);//1
 
-                scrollBy(0,-speed);
+            var src = $('.large-img>img').attr('src');
+            console.log(src);
+            var copyImg = $('<img/>').attr('src',src);
+            copyImg.css({
+                position:'absolute',
+                top:$('.large-img>img').offset().top,
+                left:$('.large-img>img').offset().left,
+                width:$('.large-img>img').width(),
+                height:$('.large-img>img').height()
+            });
+            $('body').append(copyImg);
+            var copy = copyImg.get(0)
+            console.log(copy);
+            copyImg.animate({
+                top:$('.icon-gouwuchekong').offset().top,
+                left:$('.icon-gouwuchekong').offset().left,
+                wodth:20,
+                height:20
+                },
+                5000,function(){
+                    copyImg.css({
+                        height:20,
+                        width:20
+                    });
+                copy.parentNode.removeChild(copy);
+                carList();
+            });
+        }
+        function carList(){
+            var guid = $('.car-s1>ul')
+            var res = goodslist.map(function(item){
+                return `<li data-guid ="${item.id}">
+                <img src="${item.imgurl}"/>
+                <div>
+                    <p>${item.title}</p>
+                    <p class="s1-pri">
+                        <b>￥</b>
+                        <b class="p1">${item.price}</b>
+                        <span>&times;</span>
+                        <span class="s1-qty q1">1</span>
+                    </p>
+                </div>
+            </li>`
+            });
+            $('.car-s1>ul').append(res);
 
-                if(window.scrollY <= 0){
-                    clearInterval(timer);
-                }
-            },30);
         }
-        var car = $(this).find('.car-s1');
-        if(lock){
-            car.show();
-            lock = false;
-        }else{
-            car.hide();
-            lock = true;
-        }
-    });
-        
-        
     });
 });
 
