@@ -1,9 +1,0 @@
-@charset "UTF-8";
-/*
-z-bread样式
-*/
-.z_bread { background: #F1F1F1; height: 36px; margin-bottom: 5px; }
-
-.z_bread span { font-size: 14px; line-height: 36px; padding-right: 8px; color: #666666; }
-
-.z_bread a { display: inline-block; font-size: 14px; line-height: 36px; padding-right: 8px; color: #666666; }
