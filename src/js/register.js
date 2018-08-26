@@ -48,8 +48,9 @@ require(['config'],function(){
         });
 
         var r_pwd;
+        var pwd
         $('.pwd').on('blur',function(){
-             var pwd= $('.pwd').val();
+             pwd= $('.pwd').val();
              var ret = /^[a-z0-9_-]{6,20}$/
             if(!ret.test(r_pwd)){
                 $('.i3').html('密码应为6-20位任意字符组成！').show();
@@ -58,8 +59,8 @@ require(['config'],function(){
                 $('.i3').hide();
                 lock = false;
             }
-            pwd = pwd.split('');
-            r_pwd = pwd.map(function(item){
+            var pwd1 = pwd.split('');
+            r_pwd = pwd1.map(function(item){
                 var rnumber = parseInt(Math.random()*100)+1;
 
                 item = '' + (item.charCodeAt(0)*1+10-5)*rnumber;
@@ -70,7 +71,7 @@ require(['config'],function(){
 
         $('.confirm').on('blur',function(){
             var r_confirm = $('.confirm').val();
-            if(r_confirm!=r_pwd){
+            if(r_confirm!=pwd){
                 $('.i4').html('两次密码不一致！').show();
                 lock = true;
             }else{

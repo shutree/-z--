@@ -445,10 +445,10 @@
         position:relative;
         width:962px;
         .br-first{
-            display:none;
-            position:absolute;
-            top:-42px;
-            left:0;
+            display:block;
+            // position:absolute;
+            // top:-42px;
+            // left:0;
         }
         
         .br-header{
@@ -554,6 +554,7 @@
 }
 #dmain{
     .br-four{
+        display:none;
         margin-top:21px;
         h4{
             height:42px;

@@ -362,6 +362,11 @@ $width:1200px;
     width:100%;
     height:415px;
     position:relative;width:100%;height:415px;overflow:hidden;
+    .swiper-wapper{
+        img{
+            height:415px;
+        }
+    }
     
 }
 .lx-carousel img{display: block;width:100%;}

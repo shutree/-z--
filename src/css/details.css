@@ -184,7 +184,7 @@
 
 #dmain .dmain-br { position: relative; width: 962px; }
 
-#dmain .dmain-br .br-first { display: none; position: absolute; top: -42px; left: 0; }
+#dmain .dmain-br .br-first { display: block; }
 
 #dmain .dmain-br .br-header { border-bottom: 1px solid #ddd; height: 42px; }
 
@@ -220,7 +220,7 @@
 
 #dmain .br-third { display: none; width: 920px; margin-top: 40px; font-size: 12px; line-height: 32px; color: #666; }
 
-#dmain .br-four { margin-top: 21px; }
+#dmain .br-four { display: none; margin-top: 21px; }
 
 #dmain .br-four h4 { height: 42px; font-size: 14px; line-height: 42px; padding-left: 12px; color: #000; background: #F7F7F7; margin-bottom: 10px; }
 

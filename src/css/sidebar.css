@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* 右侧边样式 */
+.side { z-index: 1000; position: fixed; right: 0; top: 0; height: 220px; width: 45px; background: #fff; margin: 100px auto; }
+
+.side div { height: 44px; text-align: center; position: relative; }
+
+.side div i { display: block; width: 45px; line-height: 44px; font-size: 22px; }
+
+.side div h5 { line-height: 44px; display: none; position: absolute; top: 0; right: 0; padding-right: 45px; height: 44px; width: 124px; font-size: 14px; background-color: rgba(0, 0, 0, 0.1); }
+
+.side div em { display: none; position: absolute; top: -132px; right: 45px; height: 221px; width: 200px; background: url(../img/eee.png) no-repeat; }
+
+.side div .car-s1 { position: absolute; top: -132px; right: -33px; margin: 30px; width: 258px; height: 662px; border: 2px solid #ddd; display: flex; flex-direction: column; overflow: hidden; }
+
+.side div .car-s1 .s1-top { padding: 0 10px; display: flex; height: 44px; border-bottom: 1px solid #ddd; justify-content: space-between; align-items: center; background: #fff; }
+
+.side div .car-s1 h4 { width: 66px; }
+
+.side div .car-s1 ul { background: #F1F1F1; flex: 1; overflow-x: hidden; }
+
+.side div .car-s1 ul li { background: #fff; margin: 8px 0; padding: 18px 10px; }
+
+.side div .car-s1 ul li img { width: 52px; height: 52px; }
+
+.side div .car-s1 ul li div { display: inline-block; width: 162px; font-size: 12px; vertical-align: middle; color: #999; }
+
+.side div .car-s1 ul li .p1 { color: #000; }
+
+.side div .car-s1 .s1-foot { background: #fff; padding: 8px 10px; font-size: 13px; height: 50px; border-top: 1px solid #ddd; display: flex; justify-content: space-between; }
+
+.side div .car-s1 .s1-foot .f1 .f1-price { color: #CC5252; }
+
+.side div .car-s1 .s1-foot .f1-check { height: 34px; width: 122px; text-align: center; background: #CC5252; border-radius: 17px; line-height: 34px; }
+
+.side div .car-s1 .s1-foot .f1-check a { color: #fff; }
+
+.side .side-erweima:hover { background-color: rgba(0, 0, 0, 0.1); }
+
+.side .side-erweima:hover em { display: block; }
+
+.side .side-car:hover h5 { display: block; }
+
+.side .collect:hover h5 { display: block; }
+
+.side .step:hover h5 { display: block; }
+
+.side .back:hover h5 { display: block; }
+
+.side div.active { background: #000; }
+
+.side .collect .car-s1 { top: -174px; }
+
+.side .step .car-s1 { top: -218px; }

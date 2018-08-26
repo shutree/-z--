@@ -1,0 +1,150 @@
+/*
+
+右侧边样式
+ */
+
+
+.side{
+    z-index:1000;
+    position:fixed;
+    right:0;
+    top:0;
+    height:220px;
+    width:45px;
+    background:#fff;
+    margin:100px auto;
+    div{
+        height:44px;
+        text-align:center;
+        position:relative;
+        i{
+            display:block;
+            width:45px;
+            line-height:44px;
+            font-size:22px;
+        }
+        h5{
+            line-height:44px;
+            display:none;
+            position:absolute;
+            top:0;
+            right:0;
+            padding-right:45px;
+            height:44px;
+            width:124px;
+            font-size:14px;
+            background-color:rgba(0,0,0,0.1);
+        }
+        em{
+            display:none;
+            position:absolute;
+            top:-132px;
+            right:45px;
+            height:221px;
+            width:200px;
+            background:url(../img/eee.png) no-repeat;
+        }
+        .car-s1{
+            position:absolute;
+            top:-132px;
+            right:-33px;
+            margin:30px;
+            width:258px;
+            height:662px;
+            border:2px solid #ddd;
+            display:flex;
+            flex-direction:column;
+            overflow:hidden;
+            .s1-top{
+                padding:0 10px;
+                display:flex;
+                height:44px;
+                border-bottom:1px solid #ddd;
+                justify-content:space-between;
+                align-items:center;
+                background:#fff;
+            }
+            h4{
+                width:66px;
+            }
+            ul{
+                background:#F1F1F1;
+                flex:1;
+                overflow-x:hidden;
+                li{
+                    background:#fff;
+                    margin:8px 0;
+                    padding:18px 10px;
+                    img{
+                        width:52px;
+                        height:52px;
+                    }
+                    div{
+                        display:inline-block;
+                        width:162px;
+                        font-size:12px;
+                        vertical-align:middle;
+                        color:#999;
+                    }
+                    .p1{
+                        color:#000;
+                    }
+                }
+
+            }
+            .s1-foot{
+                background:#fff;
+                padding:8px 10px;
+                font-size:13px;
+                height:50px;
+                border-top:1px solid #ddd;
+                display:flex;
+                justify-content:space-between;
+                .f1{
+                    .f1-price{
+                        color:#CC5252;
+                    }
+                }
+                .f1-check{
+                    height:34px;
+                    width:122px;
+                    text-align:center;
+                    background:#CC5252;
+                    border-radius:17px;
+                    line-height:34px;
+                    a{
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
+    .side-erweima:hover{
+        background-color:rgba(0,0,0,0.1);
+    }
+    .side-erweima:hover em{
+        display:block;
+    }
+    .side-car:hover h5{
+        display:block;
+    }
+    .collect:hover h5{
+        display:block;
+    }
+    .step:hover h5{
+        display:block;
+    }
+    .back:hover h5{
+        display:block;
+    }
+    div.active{
+        background:#000;
+    }
+    .collect .car-s1{
+        top:-174px;
+    }
+    .step .car-s1{
+        top:-218px;
+    }
+
+}

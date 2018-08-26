@@ -51,6 +51,9 @@
 #top .search .logo1{
     margin-left:58px;
 }
+#top .search form{
+    display:inline-block;
+}
 #top .search input{
     border-bottom:1px solid #999999;
     width:280px;
@@ -58,6 +61,12 @@
     line-height: 36px;
     font-size: 12px;
     color:#999999;
+    padding-left:30px;
+}
+#top .search i{
+    display:inline-block;
+    width:15px;
+    height:15px;
 }
 #top .search-right{
     margin:46px 12px 0 0;
@@ -70,6 +79,7 @@
     line-height: 42px;
 }
 #top .nav-l .pro{
+    padding-left:10px;
     background-color:#A62222;
     height:42px;
 }
@@ -122,6 +132,35 @@
     width:780px;
     height:429px;
     border-top:2px solid #000;
+    background:#fff;
+}
+#top .nav-bar li:nth-child(2) .nav-more{
+    position:absolute;
+    top:-52px;
+}
+#top .nav-bar li:nth-child(3) .nav-more{
+    position:absolute;
+    top:-104px;
+}
+#top .nav-bar li:nth-child(4) .nav-more{
+    position:absolute;
+    top:-156px;
+}
+#top .nav-bar li:nth-child(5) .nav-more{
+    position:absolute;
+    top:-208px;
+}
+#top .nav-bar li:nth-child(6) .nav-more{
+    position:absolute;
+    top:-260px;
+}
+#top .nav-bar li:nth-child(7) .nav-more{
+    position:absolute;
+    top:-312px;
+}
+#top .nav-bar li:nth-child(8) .nav-more{
+    position:absolute;
+    top:-364px;
 }
 #top .nav-r{
     float:left;
@@ -134,7 +173,7 @@
 }
 #top .nav-r ul li{
     float:left;
-
+    background:#fff;
 }
 
 #top .nav-r ul li a{
@@ -146,10 +185,38 @@
     line-height: 42px;
 }
 
+#top .nav-l .nav-bar li .nav-more .nav_mt li{
+    background:#fff;
+    height:64px;
+}
+#top .nav-l .nav-bar li .nav-more .nav_mt {
+    border-bottom:1px solid #ddd;
+}
+
+#top .nav-l .nav-more .nav_mt li img{
+    padding-left:20px;
+    height:64px;
+}
+
+#top .nav-l .nav-bar li .nav-more .nav_mb li{
+    padding:0;
+    width:76px;
+    background:#fff;
+    height:14px;
+    font-size:14px;
+}
+#top .nav-l .nav-bar li .nav-more .nav_mb li a{
+    display:block;
+    height:14px;
+    line-height: 14px;
+    padding:0 18px;
+    border-right:1px solid #ddd;
+}
+
+
 #banner{
     height:415px;
     width:100%;
-    background-color: pink;
 }
 
 #hmain{

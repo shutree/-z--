@@ -1,8 +1,6 @@
 
 require(['config'],function(){
     require(['jquery','common'],function($,com){
-
-
         var _pageNo = 1;
         var _qty = 48;
         var len;
@@ -32,6 +30,40 @@ require(['config'],function(){
             }
 
         });
+        // 分页
+        $('.page-t').on('click','span',function(){
+            
+            if($(this).text() == '<'){
+                console.log($(this).text());
+                _pageNo--;
+                if(_pageNo<=1){
+                    _pageNo=1;
+                }
+                $('.pro_page').html(_pageNo);
+            }
+            if($(this).text() == '>'){
+                _pageNo++;
+                if(_pageNo>=3){
+                    _pageNo=3;
+                }
+                $('.pro_page').html(_pageNo);
+            }
+            $.ajax({
+                type:"post",
+                url:'../api/goods.php',
+                data:{
+                    qty:_qty,
+                    pageNo:_pageNo
+                },
+                success:function(res){
+                    res = JSON.parse(res);
+                    outres = res;
+                    cre(res);
+                }
+            });
+        });
+
+
         var outres;
         $('.pages').on('click','span',function(){
             _pageNo = $(this).text();
@@ -128,123 +160,47 @@ require(['config'],function(){
             });
         });
 
-            
-/*       var Car = {
-            goodslist:[],
-            totalPrice:0,
-            ele:'.cart-list ul',
-
-
-            init(){
-                this.ele = $(this.ele);
-
-                // 删除单个商品
-                this.ele.on('click','.btn-close',(e)=>{
-                    // 获取当前li
-                    let $currentLi = $(e.target).closest('li');
-                    let idx = $currentLi.index();
-
-                    this.remove(idx);
-                });
-            },
-
-            // 添加商品
-            add(idx){
-                let $currentLi = $('.main-r-list li').eq(idx);
-                let $currentImg =  $currentLi.children('img');
-                
-                 // 获取商品名称
-                let name =  $currentLi.children('h5').eq(1).text();
-
-                // 获取图片路径
-                let imgurl = $currentImg.attr('src');
-
-                this.currentImg = $currentImg;
-            
-                this.goodslist.push({
-                    name:name,
-                    imgurl:imgurl
-                });
-
-                // 动画完成后渲染
-                this.animate(imgurl,()=>{
-                    this.render();
-                })
-
-                
-
-            },
-            remove(idx){
-                this.goodslist.splice(idx,1);
-
-                 this.render();
-            },
-
-            // 清空
-            clear(){
-                this.goodslist = [];
-
-                this.render();
-            },
-
-            // 渲染数据到页面
-            render(){
-                // 生成html结构
-                let content = this.goodslist.map((item,idx)=>{
-                    return `<li>
-                            <img src="${item.imgurl}" />
-                            <h4>${item.name}</h4>
-                            <span class="btn-close">&times;</span>
-                    </li>`
-                }).join('');
-
-                // 写入页面
-                this.ele.html(content);
-            },
-
-            // 动画
-            animate(imgurl,callback){
-                // 创建以imgurl为地址的图片
-                let $copyImg = $('<img/>').attr({src:imgurl});
-
-                // 设置图片样式
-                $copyImg.css({
-                    position:'absolute',
-                    left:this.currentImg.offset().left,
-                    top:this.currentImg.offset().top,
-                    width:this.currentImg.width()
-                });
-
-                $copyImg.animate({
-                    left:this.ele.offset().left,
-                    top:this.ele.offset().top+this.ele.outerHeight(),
-                    width:10
-                },function(){
-                    callback();
-
-                    // 移除复制的图片
-                    $copyImg.remove();
-                });
-
-                // $('body').append($copyImg);
-                $copyImg.appendTo('body');
+        // 侧边栏点击显示更多
+        var display = true;
+        $('.icon-iconfontadd').on('click',function(){
+            if(display){
+                $(this).closest('li').find('ul').css('display','block');
+                display = false;
+            }else{
+                $(this).closest('li').find('ul').css('display','none');
+                display = true;
             }
-        }
-
-        Car.init();
-
-        $('.main-r-list').on('click','.through-car',function(){
-            // 获取当前li
-            let $currentLi = $(this).closest('li');
-
-            // 获取商品名称
-            // let name = $currentLi.children('p').eq(1).text();
-            // 获取图片路径
-            // let imgurl = $currentLi.children('img').attr('src');
-
-            Car.add($currentLi.index());
         });
+
+        // 右侧边效果
+        $('.side').load('html/sidebar.html');
+        $('.car-s1').hide();
+        var lock = true;
+        $('.side').on('click','div',function(){
+        console.log(666)
+        // 回到顶部效果
+        if($(this).get(0).className == 'back'){
+            let timer = setInterval(()=>{
+                // 计算缓冲速度
+                let speed = Math.ceil(window.scrollY/5);//1
+
+                scrollBy(0,-speed);
+
+                if(window.scrollY <= 0){
+                    clearInterval(timer);
+                }
+            },30);
+        }
+        var car = $(this).find('.car-s1');
+        if(lock){
+            car.show();
+            lock = false;
+        }else{
+            car.hide();
+            lock = true;
+        }
+    });
+
         
-*/
     });
 });

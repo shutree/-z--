@@ -18,5 +18,4 @@ $res = array(
 );
  $arr = array($res);
 echo json_encode($arr,JSON_UNESCAPED_UNICODE);
-
 ?>

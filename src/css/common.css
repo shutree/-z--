@@ -53,6 +53,9 @@
 #top .search .logo1{
     margin-left:58px;
 }
+#top .search form{
+    display:inline-block;
+}
 #top .search input{
     border-bottom:1px solid #999999;
     width:280px;
@@ -60,6 +63,12 @@
     line-height: 36px;
     font-size: 12px;
     color:#999999;
+    padding-left:30px;
+}
+#top .search i{
+    display:inline-block;
+    width:15px;
+    height:15px;
 }
 #top .search-right{
     margin:46px 12px 0 0;

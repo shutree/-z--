@@ -22,7 +22,7 @@
 
 #buy-main .c-goodslist ul li img { height: 90px; width: 90px; }
 
-#buy-main .c-goodslist ul li .goods_num { margin-left: 95px; height: 20px; width: 80px; border: 1px solid #ddd; }
+#buy-main .c-goodslist ul li .goods_num { margin-left: 90px; height: 20px; width: 80px; border: 1px solid #ddd; }
 
 #buy-main .c-goodslist ul li .goods_num input { width: 42px; text-align: center; }
 
@@ -36,11 +36,11 @@
 
 #buy-main .c-goodslist ul li .des_goods .des-g { display: inline-block; width: 246px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #999; }
 
-#buy-main .c-goodslist ul li .cost { margin-left: 70px; }
+#buy-main .c-goodslist ul li .cost { margin-left: 60px; }
 
-#buy-main .c-goodslist ul li .total-cost { margin-left: 80px; }
+#buy-main .c-goodslist ul li .total-cost { margin-left: 70px; }
 
-#buy-main .c-goodslist ul li .ope-goods { margin-left: 90px; }
+#buy-main .c-goodslist ul li .ope-goods { margin-left: 70px; }
 
 #buy-main .c-goodslist ul li .ope-goods span { display: block; text-align: center; color: #666; }
 
